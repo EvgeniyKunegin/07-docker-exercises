@@ -1,0 +1,11 @@
+version: '3'
+services:
+  phpMyAdmin:
+      image: mysql:8.2.0
+      ports:
+        - 8080:8080
+      environment:
+        - MYSQL_ROOT_PASSWORD=dbPass2
+        - MYSQL_DATABASE=teambase
+        - MYSQL_USER=teambaseuser
+        - MYSQL_PASSWORD=teambaseuserPass
