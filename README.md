@@ -22,3 +22,9 @@ Start mysql container locally using the official Docker image. Set all needed en
 Export all needed environment variables for your application for connecting with the database (check variable names inside the code)
 Build a jar file and start the application. Test access from browser. Make some changes.
 
+---------------
+I added variables to app over jar-file settings. As a result, file docker-exercises-project-1.0-SNAPSHOT.jar.run.xml was created.
+App started on 8080 port, and mysql started on 3306.
+
+
+
