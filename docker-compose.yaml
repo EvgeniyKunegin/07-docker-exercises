@@ -9,6 +9,8 @@ services:
       - MYSQL_DATABASE=teambase
       - MYSQL_USER=teambaseuser
       - MYSQL_PASSWORD=teambaseuserPass
+    volumes:
+      - mysql-data:/var/lib/mysql
 
   phpmyadmin:
     image: phpmyadmin:5.2.1-apache
@@ -16,4 +18,9 @@ services:
       - 8081:80
     environment:
       - PMA_HOST=mySQL
+
+volumes:
+  mysql-data:
+    driver: local
+
 
