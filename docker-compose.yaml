@@ -19,6 +19,11 @@ services:
     environment:
       - PMA_HOST=mySQL
 
+  team-java-app:
+    image: team-java-app:1.0
+    ports:
+      - 8080:8080
+
 volumes:
   mysql-data:
     driver: local

@@ -1,14 +1,17 @@
-FROM eclipse-temurin:17-jdk-jammy
+FROM openjdk:17.0.2-jdk
 
-ENV MONGO_DB_USERNAME=admin \
-    MONGO_DB_PWD=password
+EXPOSE 8080
 
-RUN mkdir -p /home/java-app
+RUN mkdir -p /opt/java-app
 
-COPY ./app /home/java-app
+ENV DB_NAME=teambase
+ENV DB_PWD=teambaseuserPass
+ENV DB_SERVER=localhost
+ENV DB_USER=teambaseuser
 
-# set default dir so that next commands executes in /home/app dir
-WORKDIR /home/java-app
+COPY /app/docker-exercises-project-1.0-SNAPSHOT.jar /opt/java-app
 
-# no need for /home/app/server.js because of WORKDIR
-CMD ["java.exe -jar docker-exercises-project-1.0-SNAPSHOT.jar"]
+# set default dir so that next commands executes in /opt/java-app dir
+WORKDIR /opt/java-app
+
+CMD ["java","-jar","docker-exercises-project-1.0-SNAPSHOT.jar"]
