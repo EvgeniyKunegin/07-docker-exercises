@@ -4,10 +4,10 @@ EXPOSE 8080
 
 RUN mkdir -p /opt/java-app
 
-ENV DB_NAME=teambase
-ENV DB_PWD=teambaseuserPass
-ENV DB_SERVER=localhost
-ENV DB_USER=teambaseuser
+# ENV DB_NAME=teambase
+# ENV DB_PWD=teambaseuserPass
+# ENV DB_SERVER=localhost
+# ENV DB_USER=teambaseuser
 
 COPY /app/docker-exercises-project-1.0-SNAPSHOT.jar /opt/java-app
 
