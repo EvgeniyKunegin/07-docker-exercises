@@ -26,7 +26,7 @@ services:
       - mysql-data:/var/lib/mysql
 
   phpmyadmin:
-    image: phpmyadmin:5.2.1-apachedocker
+    image: phpmyadmin:5.2.1-apache
     ports:
       - 8085:80
     environment:
