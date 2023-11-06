@@ -1,5 +1,16 @@
 version: '3'
 services:
+  team-java-app:
+    image: team-java-app:1.0
+    environment:
+      - DB_NAME=teambase
+      - DB_PWD=teambaseuserPass
+      - DB_SERVER=localhost
+      - DB_USER=teambaseuser
+
+    ports:
+      - 8080:8080
+      -
   mySQL:
     image: mysql:8.2.0
     ports:
@@ -18,11 +29,6 @@ services:
       - 8085:80
     environment:
       - PMA_HOST=mySQL
-
-  team-java-app:
-    image: team-java-app:1.0
-    ports:
-      - 8080:8080
 
 volumes:
   mysql-data:
