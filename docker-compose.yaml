@@ -5,7 +5,7 @@ services:
     environment:
       - DB_NAME=teambase
       - DB_PWD=teambaseuserPass
-      - DB_SERVER=localhost
+      - DB_SERVER=mySQL
       - DB_USER=teambaseuser
     ports:
       - 8080:8080
