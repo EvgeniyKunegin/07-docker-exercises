@@ -3,10 +3,10 @@ services:
   team-java-app:
     image: team-java-app:1.0
     environment:
-      - DB_NAME=teambase
-      - DB_PWD=teambaseuserPass
-      - DB_SERVER=mySQL
-      - DB_USER=teambaseuser
+      - DB_NAME=${DB_NAME}
+      - DB_PWD=${DB_PWD}
+      - DB_SERVER=${DB_SERVER}
+      - DB_USER=${DB_USER}
     ports:
       - 8080:8080
     container_name: team-java-app
@@ -18,10 +18,10 @@ services:
     ports:
       - 3306:3306
     environment:
-      - MYSQL_ROOT_PASSWORD=dbPass2
-      - MYSQL_DATABASE=teambase
-      - MYSQL_USER=teambaseuser
-      - MYSQL_PASSWORD=teambaseuserPass
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
     volumes:
       - mysql-data:/var/lib/mysql
 
@@ -30,7 +30,8 @@ services:
     ports:
       - 8085:80
     environment:
-      - PMA_HOST=mySQL
+      - PMA_HOST=${PMA_HOST}
+      - PMA_PORT=${PMA_PORT}
 
 volumes:
   mysql-data:
