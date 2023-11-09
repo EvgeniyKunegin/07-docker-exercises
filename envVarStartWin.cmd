@@ -9,4 +9,4 @@
 	 set PMA_HOST=mySQL
 	 set PMA_PORT=3306
 
-	 docker-compose -f docker-compose-with-app.yaml up
+	docker-compose -f docker-compose.yaml up
