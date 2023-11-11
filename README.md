@@ -38,6 +38,31 @@ done
 
 ----------------------------------------------------------
 
+EXERCISE 4: Dockerize your Java Application
+Now you are done with testing the application locally with Mysql database and want to deploy it on the server to make it accessible for others in the team, so they can edit information.
+And since your DB and DB UI are running as docker containers, you want to make your app also run as a docker container. So you can all start them using 1 docker-compose file on the server. So you do the following:
+Create a Dockerfile for your java application
 
+done
 
+----------------------------------------------------------
 
+EXERCISE 5: Build and push Java Application Docker Image
+Now for you to be able to run your java app as a docker image on a remote server, it must be first hosted on a docker repository, so you can fetch it from there on the server. Therefore, you have to do the following:
+Create a docker hosted repository on Nexus
+Build the image locally and push to this repository
+
+done
+
+-----------------------------------------------------------
+
+EXERCISE 6: Add application to docker-compose
+Add your application's docker image to docker-compose. Configure all needed env vars.
+
+Now your app and Mysql containers in your docker-compose are using environment variables.
+
+Make all these environment variable values configurable, by setting them on the server when deploying.
+
+done
+
+------------------------------------------------------------
